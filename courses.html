@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses - Jan</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta
+      name="description"
+      content="Browse our comprehensive catalog of professional courses at Jan. From web development to data science, find the perfect course for your career growth."
+    />
+    <meta
+      name="keywords"
+      content="online courses, professional courses, web development, data science, digital marketing"
+    />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="Course Catalog - Jan" />
+    <meta
+      property="og:description"
+      content="Discover our wide range of professional courses designed to advance your career."
+    />
+    <meta
+      property="og:image"
+      content="https://Jan.example.com/images/courses-og.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://Jan.example.com/courses.html"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jan Course Catalog" />
+    <meta
+      name="twitter:description"
+      content="Find the perfect course for your professional development"
+    />
+    <meta
+      name="twitter:image"
+      content="https://Jan.example.com/images/twitter-courses.jpg"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .course-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("/api/placeholder/1200/400");
+        background-size: cover;
+        color: white;
+        padding: 60px 0;
+      }
+
+      .course-card {
+        transition: transform 0.3s;
+        margin-bottom: 20px;
+      }
+
+      .course-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .course-card img {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .filter-sidebar {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .category-badge {
+        background-color: #e9ecef;
+        color: #495057;
+        padding: 5px 10px;
+        border-radius: 15px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+
+      .course-level {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+      }
+
+      @media (max-width: 768px) {
+        .filter-sidebar {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header (Same as homepage) -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="container">
+        <a class="navbar-brand" href="index.html">Jan</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <main>
+        <!-- Course Header -->
+        <section class="course-header">
+          <div class="container text-center">
+            <h1 class="display-4">Our Course Catalog</h1>
+            <p class="lead">
+              Choose from over 100+ courses designed to help you achieve your
+              goals
+            </p>
+          </div>
+        </section>
+  
+        <!-- Course Listing Section -->
+        <section class="py-5">
+          <div class="container">
+            <div class="row">
+              <!-- Filter Sidebar -->
+              <div class="col-md-3">
+                <aside class="filter-sidebar">
+                  <h4>Filter Courses</h4>
+  
+                  <!-- Category Filter -->
+                  <div class="mb-4">
+                    <h5>Categories</h5>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="webdev"
+                      />
+                      <label class="form-check-label" for="webdev"
+                        >Web Development</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="datascience"
+                      />
+                      <label class="form-check-label" for="datascience"
+                        >Data Science</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="marketing"
+                      />
+                      <label class="form-check-label" for="marketing"
+                        >Digital Marketing</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="design"
+                      />
+                      <label class="form-check-label" for="design"
+                        >UI/UX Design</label
+                      >
+                    </div>
+                  </div>
+  
+                  <!-- Level Filter -->
+                  <div class="mb-4">
+                    <h5>Level</h5>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="beginner"
+                      />
+                      <label class="form-check-label" for="beginner"
+                        >Beginner</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="intermediate"
+                      />
+                      <label class="form-check-label" for="intermediate"
+                        >Intermediate</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="advanced"
+                      />
+                      <label class="form-check-label" for="advanced"
+                        >Advanced</label
+                      >
+                    </div>
+                  </div>
+
+
+                <!-- Price Filter -->
+                <div class="mb-4">
+                    <h5>Price</h5>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="free" />
+                      <label class="form-check-label" for="free">Free</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="paid" />
+                      <label class="form-check-label" for="paid">Paid</label>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+  
+              <!-- Course Grid -->
+              <div class="col-md-9">
+                <div class="row">
+                  <!-- Course Card 1 -->
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card course-card">
+                      <span class="course-level">Beginner</span>
+                      <img
+                        src="https://img.freepik.com/free-photo/close-up-portrait-beautiful-cat_23-2149214363.jpg?t=st=1736924719~exp=1736928319~hmac=8be0d666a57b56689d8e9483ec7311c21b058a330e5d3ef7efb70c0e902d0388&w=1060" /img/web1-dev.png"
+                        class="card-img-top"
+                        alt="Web Development"
+                      />
+                      <div class="card-body">
+                        <span class="category-badge">Web Development</span>
+                        <h5 class="card-title mt-2">
+                          Complete Web Development Bootcamp
+                        </h5>
+                        <p class="card-text">
+                          Learn HTML, CSS, JavaScript, React, and Node.js from
+                          scratch.
+                        </p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span class="text-primary fw-bold">$99.99</span>
+                          <a href="#" class="btn btn-outline-primary"
+                            >Learn More</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Course Card 2 -->
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card course-card">
+                      <span class="course-level">Advanced</span>
+                      <img
+                        src="https://img.freepik.com/free-photo/close-up-portrait-beautiful-cat_23-2149214363.jpg?t=st=1736924719~exp=1736928319~hmac=8be0d666a57b56689d8e9483ec7311c21b058a330e5d3ef7efb70c0e902d0388&w=1060" /img/data-science.jpg"
+                        class="card-img-top"
+                        alt="Data Science"
+                      />
+                      <div class="card-body">
+                        <span class="category-badge">Data Science</span>
+                        <h5 class="card-title mt-2">
+                          Advanced Data Science with Python
+                        </h5>
+                        <p class="card-text">
+                          Master machine learning and data analysis techniques.
+                        </p>
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <span class="text-primary fw-bold">$129.99</span>
+                          <a href="#" class="btn btn-outline-primary"
+                            >Learn More</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                <!-- Price Filter -->
+                <!-- <div class="mb-4">
+                    <h5>Price</h5>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="free" />
+                      <label class="form-check-label" for="free">Free</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="paid" />
+                      <label class="form-check-label" for="paid">Paid</label>
+                    </div>
+                  </div> -->
+                </aside>
+              </div>
+  
+              
+      
